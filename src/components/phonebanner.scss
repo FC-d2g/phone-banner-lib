@@ -1,0 +1,147 @@
+:root{
+  --neutral-100: #FFFFFF;
+  --neutral-500: #424242;
+  --feedback-700: #0059ff;
+  --body-text-XL: 18px;
+  --body-text-M: 15px;
+  --body-text-S: 14px;
+}
+
+.banner {
+  display: none;
+
+  &.appear {
+    position: absolute;
+    height: fit-content;
+    width: 100%;
+    background-color: var(--neutral-100);
+    box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    padding: 1.2rem;
+    animation: myAnim 1s ease 0s 1 normal forwards;
+  }
+
+  &.disappear {
+    position: absolute;
+    height: fit-content;
+    width: 100%;
+    background-color: var(--neutral-100);
+    box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    padding: 1.2rem;
+    animation: myAnim2 1s ease 0s 1 normal forwards;
+  }
+
+  & .all-content {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 100%;
+    gap: 1rem;
+
+    & i {
+      font-size: var(--body-text-XL);
+      color: var(--neutral-500);
+      opacity: 0.8;
+    }
+
+    & img {
+      object-fit: cover;
+      object-position: center;
+      width: 15%;
+    }
+
+    & .content {
+      display: flex;
+      flex-direction: column;
+
+      & .title {
+        font-size: var(--body-text-M);
+        font-weight: 600;
+        color: var(--neutral-900);
+      }
+
+      & h6 {
+        font-size: var(--body-text-S);
+        font-weight: 400;
+        color: var(--neutral-500);
+        opacity: 0.8;
+      }
+    }
+  }
+
+  & a {
+    text-decoration: none;
+    color: var(--feedback-700);
+  }
+}
+
+@keyframes myAnim {
+  0% {
+    opacity: 0;
+    transform: translateY(-50px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes myAnim2 {
+  0% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  100% {
+    opacity: 0;
+    transform: translateY(-50px);
+  }
+}
+
+$icomoon-font-family: "icomoon" !default;
+$icomoon-font-path: "../components/fonts" !default;
+
+$moon-xmark: "\e909";
+
+@font-face {
+  font-family: '#{$icomoon-font-family}';
+  src:  url('#{$icomoon-font-path}/#{$icomoon-font-family}.eot?4iw47d');
+  src:  url('#{$icomoon-font-path}/#{$icomoon-font-family}.eot?4iw47d#iefix') format('embedded-opentype'),
+    url('#{$icomoon-font-path}/#{$icomoon-font-family}.ttf?4iw47d') format('truetype'),
+    url('#{$icomoon-font-path}/#{$icomoon-font-family}.woff?4iw47d') format('woff'),
+    url('#{$icomoon-font-path}/#{$icomoon-font-family}.svg?4iw47d##{$icomoon-font-family}') format('svg');
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
+[class^="moon-"], [class*=" moon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: '#{$icomoon-font-family}' !important;
+  speak: never;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.moon-xmark {
+  &:before {
+    content: $moon-xmark; 
+  }
+}
