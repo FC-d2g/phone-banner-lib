@@ -90,3 +90,9 @@ function App() {
 ---
 
 Enhance your mobile user experience with `phone-banner-lib` today!
+
+---
+
+# Report errors
+
+[Report issues or contribute on GitHub](https://github.com/FC-d2g/phone-banner-lib.git)
