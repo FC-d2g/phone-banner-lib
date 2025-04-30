@@ -92,6 +92,13 @@ function App() {
 Enhance your mobile user experience with `phone-banner-lib` today!
 
 ---
+### Example Video
+
+Here is a video demonstration of the `PhoneBanner` component in action:
+
+[![PhoneBanner Demo]](https://streamable.com/95f8bp "PhoneBanner Demo")
+
+---
 
 # Report errors
 
